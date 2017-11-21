@@ -6,21 +6,25 @@
 #    By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/19 14:29:45 by mfonteni          #+#    #+#              #
-#    Updated: 2017/11/19 14:42:54 by mfonteni         ###   ########.fr        #
+#    Updated: 2017/11/21 13:04:48 by mfonteni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 BPATH = ../fillit
 TESTPATH = tests/
 NAME = fillitests
+CC = gcc -Wall -Wextra -Werror
 
-all: buildtests clean
+all: buildtests
 
-f : all
-	./a.out
+exe : all
+	./fillitests
 
 buildtests:
-	@gcc -Wall -Wextra -Werror Unit_tests.c $(TESTPATH)*.c $(BPATH)/*.c -o fillitests
+	@$(CC) $(NAME).c $(TESTPATH)*.c $(BPATH)/*.c libft.a -o fillitests
+
+testFunc:
+	@$(CC) $(BPATH)/ft_placeblock.c libft.a fillitests.c $(TESTPATH)*.c -o fillitests
 
 clean:
 	@echo "nothing to clean";

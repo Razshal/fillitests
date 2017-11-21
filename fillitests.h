@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 14:16:31 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/11/19 14:29:36 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/11/21 13:04:49 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 #define FILLITESTS_H
 
 #include "../fillit/fillit.h"
+#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #define SUCCESSMSG "\e[32m[Success]\e[39m\n"
 #define PRINTFSUCCESS printf("%s", SUCCESSMSG)
 #define FAILUREMSG "\e[31m[Failure]\e[39m\n"
@@ -21,5 +25,7 @@
 #define EASYTESTFAIL printf("Echec d'un test de fonctionnement basique\n");
 #define INTMIN "-2147483648"
 #define INTMAX "2147483647"
+
+void	test_ft_placeblock(void);
 
 #endif
