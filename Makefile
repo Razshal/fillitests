@@ -6,7 +6,7 @@
 #    By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/19 14:29:45 by mfonteni          #+#    #+#              #
-#    Updated: 2017/11/21 13:04:48 by mfonteni         ###   ########.fr        #
+#    Updated: 2017/11/22 16:15:10 by mfonteni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ buildtests:
 	@$(CC) $(NAME).c $(TESTPATH)*.c $(BPATH)/*.c libft.a -o fillitests
 
 testFunc:
-	@$(CC) $(BPATH)/ft_placeblock.c libft.a fillitests.c $(TESTPATH)*.c -o fillitests
+	@$(CC) $(BPATH)/ft_*.c $(BPATH)/libft/*.c fillitests.c $(TESTPATH)*.c -o fillitests
 
 clean:
 	@echo "nothing to clean";

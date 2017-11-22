@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 12:13:31 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/11/21 12:48:18 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/11/22 16:55:25 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,16 @@
 
 void test_ft_placeblock(void)
 {
-	char block[] = "ldd";
+	PRINTNAME("test basique de placement de bloc");
+
 	char **grid = ft_strsplit(".......... .......... .......... .......... .......... .......... .......... .......... .......... ..........", ' ');
 
-	ft_placeblock(block, grid, 0, 0, 'A');
+	if (ft_placeblock("dlbd", grid, 2, 1) && ft_alphablock(grid, 'A')
+			&& ft_placeblock("drbd", grid, 0, 0) && ft_alphablock(grid, 'B')
+			&& ft_placeblock("rrr", grid, 1, 0) && ft_alphablock(grid, 'C')
+		)
+		PRINTFSUCCESS;
+	else
+		PRINTFFAILURE;
 	ft_print_split(grid);
 }

@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 14:16:31 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/11/21 13:04:49 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/11/22 16:08:17 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 #define FILLITESTS_H
 
 #include "../fillit/fillit.h"
-#include "libft.h"
+#include "../fillit/libft/libft.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#define PRINTNAME(name) printf("=== %s ===\n", name);
 #define SUCCESSMSG "\e[32m[Success]\e[39m\n"
 #define PRINTFSUCCESS printf("%s", SUCCESSMSG)
 #define FAILUREMSG "\e[31m[Failure]\e[39m\n"
