@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 12:13:31 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/11/22 16:55:25 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/11/24 19:00:22 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,23 @@ void test_ft_placeblock(void)
 		PRINTFFAILURE;
 	ft_print_split(grid);
 }
+/*
+void test_ft_placeblock2(t_list *list)
+{
+	int cline = 0;
+	int crow = 0;
+	int count = 0;
+	char ch = 'A';
+	char **grid = ft_strsplit(".......... .......... .......... .......... .......... .......... .......... .......... .......... ..........", ' ');
+
+	while (list)
+	{
+		if (ft_placeblock(list->content, grid, cline, crow) && ft_alphablock(grid, ch))
+		{
+			list = list->next;
+			count++;
+		}
+		else
+
+	}
+}*/

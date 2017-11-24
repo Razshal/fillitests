@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 14:16:31 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/11/22 16:08:17 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/11/24 18:49:59 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@
 #define INTMAX "2147483647"
 
 void	test_ft_placeblock(void);
+void	test_ft_placenext(void);
 
 #endif
