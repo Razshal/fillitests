@@ -6,32 +6,31 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 18:39:59 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/11/26 20:21:51 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/11/27 17:37:38 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../fillitests.h"
 
-int *nextpos(char **grid, int limit);
-
-static void	tester(char **grid, char *block, int limit)
+void	tester(char *block, char **grid, int limit, char letter)
 {
-	int *array = nextpos(grid, limit);
-
-	if (ft_placeblock(block, grid, array[0], array[1]) && ft_alphablock(grid, 'A'))
+	if (ft_placenext(block, grid, limit, letter))
 		PRINTFSUCCESS;
 	else
 		PRINTFFAILURE;
 	ft_print_split(grid);
-
 }
 
 void	test_ft_placenext(void)
 {
 	PRINTNAME("test placenext");
+	char **grid = ft_tabcreator(10);
 
-	char **grid = ft_strsplit("..... ..... ..... ..... .....", ' ');
-
-	tester(grid, "rrr", 5);
-	tester(grid, "rrr", 5);
+	tester("ddd", grid, 5, 'A');
+	tester("rrr", grid, 5, 'B');
+	tester("rdl", grid, 5, 'C');
+	tester("rdl", grid, 5, 'D');
+	tester("rrr", grid, 5, 'E');
+	tester("ddd", grid, 5, 'F');
+	tester("ddd", grid, 5, 'G');
 }
